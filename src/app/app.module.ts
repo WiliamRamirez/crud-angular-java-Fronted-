@@ -9,18 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    DirectivesComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [AppComponent, HeaderComponent, FooterComponent, DirectivesComponent],
+   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+   providers: [],
+   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

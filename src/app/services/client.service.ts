@@ -1,9 +1,17 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Client } from '../models/client';
 
 @Injectable({
-  providedIn: 'root'
+   providedIn: 'root',
 })
 export class ClientService {
+   private urlEndPoint = 'http://localhost:8080/api';
 
-  constructor() { }
+   constructor(private http: HttpClient) {}
+
+   getClients(): Observable<Client[]> {
+      return this.http.get<Client[]>(`${this.urlEndPoint}/clients`);
+   }
 }
